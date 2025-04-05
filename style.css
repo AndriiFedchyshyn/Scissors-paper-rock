@@ -139,17 +139,17 @@ li.pick button:hover {
 /* Winner */
 
 body.winner.you-win {
-  background: url(/img/green-arrow.png) center center no-repeat;
+  background: url(img/green-arrow.png) center center no-repeat;
   background-size: auto 43%;
 }
 
 body.winner.computer-wins {
-  background: url(/img/red-arrow.png) center center no-repeat;
+  background: url(img/red-arrow.png) center center no-repeat;
   background-size: auto 43%;
 }
 
 body.winner.tie{
-  background: url(/img/tie.png) center center no-repeat;
+  background: url(img/tie.png) center center no-repeat;
   background-size: auto 50%;
 }
 
