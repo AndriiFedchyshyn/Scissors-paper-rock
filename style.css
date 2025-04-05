@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 100vh;
+  max-width: 100%;
+}
+
+.navigation {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  gap: 8rem;
+}
+
+.btn  {
+  font-size: 15px;
+  padding: 15px  30px;
+  border: 2px solid black;
+  border-radius: 30%;
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  cursor: pointer;
+  background-color:whitesmoke
+}
+
+.btn:hover {
+  background-color: bisque;
+  transform: scale(1.1);
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}
+.hover-container {
+  position: relative;
+  display: inline-block;
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  padding: 15px  30px;
+  border: 2px solid black;
+  border-radius: 30%;
+  cursor: pointer;
+  background-color:whitesmoke;
+}
+
+.hover-container .hover-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: -450%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border: #555;
+  
+}
+
+.hover-container:hover{
+   background-color: bisque;
+  transform: scale(1.1);
+}
+
+
+.hover-container:hover .hover-text {
+  visibility: visible;
+  opacity: 1;}
+ 
+
+.game {
+  align-items: center;
+  justify-content: center;
+}
+.choice {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-family: "Kanit", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+li.pick {
+  display: flex;
+  text-align: center;
+}
+
+li.pick img {
+  max-width: 20rem;
+  max-height: 20rem;
+}
+
+li.pick button {
+  background: none;
+  border: 2px solid black;
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  cursor: pointer;
+  font-size: 1.5rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+li.pick button:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+/* Winner */
+
+body.winner.you-win {
+  background: url(/img/green-arrow.png) center center no-repeat;
+  background-size: auto 43%;
+}
+
+body.winner.computer-wins {
+  background: url(/img/red-arrow.png) center center no-repeat;
+  background-size: auto 43%;
+}
+
+body.winner.tie{
+  background: url(/img/tie.png) center center no-repeat;
+  background-size: auto 50%;
+}
+
+body.computer-wins h1.you-win,
+body.you-win h1.computer-wins {
+  visibility: hidden;
+  max-width: 1200px;
+}
+
+body.winner .wrapper {
+  display: flex;
+  gap: 200px;
+  position: relative;
+}
+
+body.winner img {
+  mix-blend-mode: multiply;
+}
+
+.your-pick img {
+  transform: scaleX(-1);
+}
+
+.your-pick .computer-pick {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.score{
+  display: flex;
+  justify-content: center;
+  font-family: "Kanit", sans-serif;
+  font-size: 2rem;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  text-shadow: 1px 1px 1px #ccc;
+  gap: 4rem;
+  }
+
+.play-again {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 6%;
+  font-family: "Kanit", sans-serif;
+  font-size: 2rem;
+  border: none;
+  background: none;
+  padding: 15px 85px;
+  cursor: pointer;
+}
+
+.play-again:hover {
+  background: none;
+  color: rgba(104, 73, 161, 0.771);;
+
+}
+
+.reset-score{
+  background: none;
+  color: black;
+    font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  border: none;
+  font-size: 20px
+}
+
+.reset-score:hover{
+  background: none;
+  color: rgba(104, 73, 161, 0.771);}
